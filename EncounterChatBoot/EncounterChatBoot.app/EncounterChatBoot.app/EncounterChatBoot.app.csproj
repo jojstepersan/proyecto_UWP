@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{51F5849C-B871-43E2-A9C8-AA09E9510F21}</ProjectGuid>
+    <ProjectGuid>{EE73D6B1-7681-41B3-AFE1-7C1912E4569A}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EncounterChatBoot</RootNamespace>
-    <AssemblyName>EncounterChatBoot</AssemblyName>
+    <RootNamespace>EncounterChatBoot.app</RootNamespace>
+    <AssemblyName>EncounterChatBoot.app</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
@@ -17,7 +17,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    <PackageCertificateKeyFile>EncounterChatBoot_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>EncounterChatBoot.app_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -95,7 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainPage.xaml.cs">
+    <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +104,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="EncounterChatBoot.app_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Default.rd.xml" />
@@ -120,36 +121,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\MainPage.xaml">
+    <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.9</Version>
+      <Version>6.0.8</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Configuration\" />
-    <Folder Include="Controls\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Services\" />
-    <Folder Include="Styles\" />
-    <Folder Include="Themes\" />
-    <Folder Include="Tools\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EncounterChatBoot.Data\EncounterChatBoot.Data.csproj">
-      <Project>{1dad44ce-6920-45c2-a7b6-011566fc075b}</Project>
+    <ProjectReference Include="..\..\EncounterChatBoot.Data\EncounterChatBoot.Data.csproj">
+      <Project>{4bc4c11f-ffb1-4824-9c38-5fa49973e725}</Project>
       <Name>EncounterChatBoot.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EncounterChatBoot.ViewModel\EncounterChatBoot.ViewModel.csproj">
-      <Project>{c4297c77-fe17-41eb-b71b-d79c3491cd77}</Project>
+    <ProjectReference Include="..\..\EncounterChatBoot.ViewModel\EncounterChatBoot.ViewModel.csproj">
+      <Project>{397d5d41-ee94-4cb8-8ce8-50ae29b31523}</Project>
       <Name>EncounterChatBoot.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
