@@ -3,11 +3,11 @@
 using System;
 using System.Diagnostics;
 
-using Inventory.Data;
-using Inventory.Models;
-using Inventory.Services;
+using EncounterChatBoot.Data;
+using EncounterChatBoot.Models;
+using EncounterChatBoot.Services;
 
-namespace Inventory.ViewModels
+namespace EncounterChatBoot.ViewModels
 {
     public class ViewModelBase : ObservableObject
     {

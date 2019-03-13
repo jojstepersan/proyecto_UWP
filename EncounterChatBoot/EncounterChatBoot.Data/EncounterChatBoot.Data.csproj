@@ -5,8 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Data\" />
     <Folder Include="DataContexts\" />
     <Folder Include="DataServices\" />
   </ItemGroup>
