@@ -4,5 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:EncounterChatBoot.app"
     RequestedTheme="Light">
-
+    <Application.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="DetailsViewBackgroundColor" Color="#F5F5F5" />
+            <Color x:Key="SystemAccentColor">#107C10</Color>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
